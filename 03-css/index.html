@@ -5,22 +5,266 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>03-CSS</title>
     <link rel="stylesheet" href="../src/css/styles.css">
-    <style>
-        div.menus {
+        <style>
+        /* =========================
+        CONFIGURACIÓN GENERAL
+        ========================== */
+
+        body.css {
+            min-height: 100vh;
+            margin: 0;
+            background:
+                radial-gradient(circle at top, #241035 0%, #09070d 45%, #030303 100%);
+        }
+
+        /* =========================
+        ENCABEZADO
+        ========================== */
+
+        body.css header.mainmenu {
+            text-align: center;
+            padding: 25px 20px 15px;
+        }
+
+        body.css header.mainmenu h1 {
+            display: none;
+        }
+
+        body.css header.mainmenu img {
+            width: 250px;
+            max-width: 70%;
+            margin: 0 auto 10px;
+            display: block;
+
+            filter:
+                drop-shadow(0 0 8px rgba(126, 43, 170, .45))
+                drop-shadow(0 8px 18px rgba(0, 0, 0, .5));
+
+            transition: transform .3s ease;
+        }
+
+        body.css header.mainmenu img:hover {
+            transform: scale(1.03);
+        }
+
+        body.css header.mainmenu > h3 {
+            max-width: 700px;
+            margin: 0 auto 35px;
+
+            color: #fff;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 1.6;
+
+            border: none;
+            opacity: .9;
+        }
+
+        /* =========================
+        CONTENEDOR DE LAS COLUMNAS
+        ========================== */
+
+        body.css div.menus {
             display: flex;
-            align-items: start;
             justify-content: center;
-            gap: 1rem;
-            h3 {
-                color: #fff9;
-                text-align: center;
-                padding-bottom: 0.4rem;
-                border-bottom: 2px solid #fff9;
+            align-items: flex-start;
+
+            gap: 45px;
+
+            width: 90%;
+            max-width: 1150px;
+
+            margin: 0 auto;
+            padding-bottom: 50px;
+        }
+
+        /* =========================
+        CADA COLUMNA
+        ========================== */
+
+        body.css menu.submenu-css {
+            width: 100%;
+            max-width: 520px;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Títulos Reference */
+
+        body.css menu.submenu-css > h3 {
+            color: #d7d0dc;
+
+            text-align: center;
+
+            font-size: 18px;
+            font-weight: 600;
+
+            margin: 0 auto 28px;
+            padding-bottom: 9px;
+
+            width: max-content;
+            min-width: 130px;
+
+            border-bottom: 2px solid #aaa;
+        }
+
+        /* =========================
+        BOTONES
+        ========================== */
+
+        body.css menu.submenu-css > a {
+            display: flex;
+            align-items: center;
+
+            width: 100%;
+            min-height: 68px;
+
+            margin-bottom: 16px;
+            padding: 0;
+
+            box-sizing: border-box;
+
+            background: #a373be;
+            color: #111;
+
+            border-radius: 40px;
+
+            text-decoration: none;
+
+            box-shadow:
+                0 5px 12px rgba(212, 7, 7, 0.35);
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease,
+                background .25s ease;
+        }
+
+        /* =========================
+        NÚMERO
+        ========================== */
+
+        body.css menu.submenu-css > a > span {
+            flex-shrink: 0;
+
+            width: 48px;
+            height: 48px;
+
+            margin-left: 10px;
+            margin-right: 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #5a0875;
+            color: white;
+
+            font-size: 17px;
+            font-weight: 400;
+
+            box-shadow:
+                inset 0 0 0 1px rgba(255,255,255,.08),
+                0 3px 8px rgba(0,0,0,.25);
+        }
+
+        /* =========================
+        TEXTO
+        ========================== */
+
+        body.css menu.submenu-css > a aside {
+            margin: 0;
+            padding: 0;
+        }
+
+        body.css menu.submenu-css > a h4 {
+            margin: 0;
+
+            color: #17131a;
+
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        /* =========================
+        EFECTO AL PASAR EL MOUSE
+        ========================== */
+
+        body.css menu.submenu-css > a:hover {
+            transform: translateY(-3px);
+
+            background: #ffffff;
+
+            box-shadow:
+                0 8px 22px rgba(86, 0, 120, .45);
+        }
+
+        body.css menu.submenu-css > a:hover > span {
+            background: #700c91;
+        }
+
+        /* =========================
+        RESPONSIVE
+        ========================== */
+
+        @media screen and (max-width: 850px) {
+
+            body.css div.menus {
+                gap: 25px;
+                width: 94%;
+            }
+
+            body.css menu.submenu-css > a h4 {
+                font-size: 17px;
             }
         }
+
         @media screen and (max-width: 580px) {
-            div.menus {
+
+            body.css header.mainmenu {
+                padding-top: 15px;
+            }
+
+            body.css header.mainmenu img {
+                width: 210px;
+            }
+
+            body.css header.mainmenu > h3 {
+                font-size: 12px;
+                margin-bottom: 25px;
+            }
+
+            body.css div.menus {
                 flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            body.css menu.submenu-css {
+                width: 92%;
+            }
+
+            body.css menu.submenu-css > h3 {
+                margin-bottom: 20px;
+            }
+
+            body.css menu.submenu-css > a {
+                min-height: 62px;
+            }
+
+            body.css menu.submenu-css > a > span {
+                width: 44px;
+                height: 44px;
+                margin-left: 9px;
+                margin-right: 12px;
+            }
+
+            body.css menu.submenu-css > a h4 {
+                font-size: 16px;
             }
         }
     </style>

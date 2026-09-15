@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-advanced-selectors</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <style>
+        ul.fruits + li[class] {
+            background-color: orange;
+            padding: 0.2rem;
+        }
+    </style>
+</head> 
+<body class="css">
+    <nav class ="back">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+        </a>
+    </nav>
+    <main> 
+        <header class="mainmenu internal">
+            <h1>05-advanced-selectors</h1>
+            <img src="../src/imgs/logo-css.png" alt="Css">
+            <ul>
+                <li>Children (>)</li>
+                <li>Adjacent/sibling (+)</li>
+                <li>Attribute [class]</li>
+            </ul>
+        </header>
+        <section>
+            <h2 class="subtitle">Example:</h2>
+            <ul class="fruits">
+                <li>🍊 naranja</li>
+                <li>🍎 manzana</li>
+                <li>🍋‍🟩 limon</li>
+                <li>🍓 fresa</li>
+                <li>🍇 uvas</li>
+            </ul>
+        </section>
+        </menu>
+    </main>
+</body>

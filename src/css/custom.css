@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 main{
     section{
         article{
@@ -20,27 +20,5 @@ main{
 
         }
     }
-=======
-main{
-    section{
-        article{
-            background-color: orangered;
-            border-radius: 50%;
-            font-size: 4.6rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 2rem auto;
-            height: 240px;
-            width: 240px;
-            transition: all 0.4s  ease;
-            &:hover {
-                cursor: pointer;
-                transform: rotate(360deg);
-
-            }
-
-        }
-    }
->>>>>>> ad28f04ea0ef7c5f8605c2dc54ece05fc13ce66a
 }
+
