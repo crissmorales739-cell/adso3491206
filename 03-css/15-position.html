@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15-position</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <style>
+        section {
+            div {
+                background-color: #ab7dd5;
+                border: 2px solid #fff;
+                height: 400px;
+                margin: 1rem auto;
+                position: relative;
+                width: 360px;
+
+                img {
+                    width: 80px;
+                }
+                &.pos01 img {
+                    position: static;
+                }
+                &.pos02 img {
+                    position: relative;
+                    top: 50px;
+                    left: 50px;
+                }
+                &.pos03 img {
+                    position: absolute;
+                    bottom: 20px;
+                    right: 20px;
+                }
+                &.pos04 {
+                    transform: translate(0);
+                    img {
+                        position: fixed;
+                        top: 20px;
+                        right: 20px;
+                    }
+                }
+                &.pos05 img {
+                    position: sticky;
+                    top: 20px;
+                }
+            }
+        }
+    </style>
+</head>
+<body class="css">
+    <nav class="back">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#currentColor" viewBox="0 0 256 256"><path d="M112,56V200L40,128Z" opacity="0.2"></path><path d="M216,120H120V56a8,8,0,0,0-13.66-5.66l-72,72a8,8,0,0,0,0,11.32l72,72A8,8,0,0,0,120,200V136h96a8,8,0,0,0,0-16ZM104,180.69,51.31,128,104,75.31Z"></path></svg>
+        </a>
+    </nav>
+    <main>
+        <header class="mainmenu internal">
+            <h1>15-position</h1>
+            <img src="../src/imgs/logo-css.png" alt="css">
+            <h3>Specifies the type of positioning method used for an element.</h3>
+        </header>
+        <section>
+            <h2 class="subtitle">Normal / Static</h2>
+            <div class="pos01"><img src="imgs/mario.png" alt="mario"></div>
+            <h2 class="subtitle">Relative</h2>
+            <div class="pos02"><img src="imgs/mario.png" alt="mario"></div>
+            <h2 class="subtitle">Absolute</h2>
+            <div class="pos03"><img src="imgs/mario.png" alt="mario"></div>
+            <h2 class="subtitle">Fixed</h2>
+            <div class="pos04"><img src="imgs/mario.png" alt="mario"></div>
+            <h2 class="subtitle">Sticky</h2>
+            <div class="pos05"><img src="imgs/mario.png" alt="mario"></div>
+        </section>
+    </main>
+</body>
+</html>

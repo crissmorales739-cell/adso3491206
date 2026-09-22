@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20-pseudoclasses</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+        <style>
+        /* :link, :hover, :active, :visited */
+         
+            a:link,
+            a:visited {
+                background-color: #fff9;
+                color: #0009;
+                padding: 0.4rem 0.8rem;
+            }
+            a:hover {
+                background-color: #663399;
+                color: #fff9;
+            }
+            a:active {
+                background-color: #dc143c;
+                color: #fff9;
+            }
+            a:first-child {
+                opacity: .5;
+                pointer-events: none;
+            }
+        /* :focus, :blur */
+        input {
+            padding: 0.4rem;
+            margin-top: 0.4rem;
+            &:focus {
+                background-color: #663399;
+                color: #fff9;
+            }
+        }
+        /* :first-line, :first-letter */
+        p.paragraph {
+            &::first-line {
+                background-color: #663399;
+            }
+            &::first-letter {
+                font-size: 4rem;
+            }
+        }
+    </style>
+</head> 
+<body class="css">
+    <nav class ="back">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+        </a>
+        </a>
+    </nav>
+    <main> 
+        <header class="mainmenu internal">
+            <h1>20-pseudoclasses</h1>
+            <img src="../src/imgs/logo-css.png" alt="Css">
+            <h3> Is used to define a special state of an element.  </h3>
+        </header>
+        <section>
+            <h2 class="subtitle">:link|:hover|:active|:visited</h2>
+            <h4>:first-child|:last-child</h4>
+            <div class="options">
+                <a href="#">Option 1</a>
+                <a href="#">Option 2</a>
+                <a href="#">Option 3</a>
+            </div>
+            <h2 class="subtitle">:focus</h2>
+            <input type="text" placeholder="Enter your First Name">
+            <br>
+            <input type="text" placeholder="Enter your Last Name">
+            <h2 class="subtitle">:first-letter|:first-line</h2>
+            <p class="paragraph">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam est fugit omnis.
+            </p>
+            <h2 class="subtitle">:before|:after</h2>
+            <div class="heart"></div>
+        </section>
+        </section>
+        </menu>
+    </main>
+</body>
