@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17-visualization</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <style>
+        section {
+            div {
+                border: 2px solid #fff;
+                margin: 1rem auto;
+                padding: 1rem;
+                width: 360px;
+
+                img {
+                    width: 80px;
+                }
+                &.vis01 {
+                    img { display: block; }
+                }
+                &.vis02 {
+                    img { display: inline; }
+                }
+                &.vis03 {
+                    img { display: none; }
+                }
+                &.vis04 {
+                    display: flex;
+                    gap: 1rem;
+                }
+                &.vis05 {
+                    display: grid;
+                    gap: 1rem;
+                    grid-template-columns: repeat(3, 1fr);
+                }
+                &.vis06 {
+                    img { visibility: visible; }
+                }
+                &.vis07 {
+                    img { visibility: hidden; }
+                }
+                &.vis08 {
+                    height: 100px;
+                    overflow: visible;
+                }
+                &.vis09 {
+                    height: 100px;
+                    overflow: hidden;
+                }
+                &.vis10 {
+                    height: 100px;
+                    overflow: scroll;
+                }
+                &.vis11 {
+                    height: 100px;
+                    overflow: auto;
+                }
+                &.vis12 {
+                    position: relative;
+                    height: 120px;
+                    img:first-child {
+                        left: 20px;
+                        position: absolute;
+                        top: 20px;
+                        z-index: 1;
+                    }
+                    img:last-child {
+                        left: 60px;
+                        position: absolute;
+                        top: 40px;
+                        z-index: 2;
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+<body class="css">
+    <nav class="back">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#currentColor" viewBox="0 0 256 256"><path d="M112,56V200L40,128Z" opacity="0.2"></path><path d="M216,120H120V56a8,8,0,0,0-13.66-5.66l-72,72a8,8,0,0,0,0,11.32l72,72A8,8,0,0,0,120,200V136h96a8,8,0,0,0,0-16ZM104,180.69,51.31,128,104,75.31Z"></path></svg>
+        </a>
+    </nav>
+    <main>
+        <header class="mainmenu internal">
+            <h1>17-visualization</h1>
+            <img src="../src/imgs/logo-css.png" alt="css">
+            <h3>Properties that control how elements are displayed, hidden, overflowed and stacked on the page.</h3>
+        </header>
+        <section>
+            <h2 class="subtitle">Display: block</h2>
+            <div class="vis01">
+                <img src="imgs/mario.png" alt="mario">
+                <img src="imgs/mario.png" alt="mario">
+            </div>
+            <h2 class="subtitle">Display: inline</h2>
+            <div class="vis02">
+                <img src="imgs/mario.png" alt="mario">
+                <img src="imgs/mario.png" alt="mario">
+            </div>
+            <h2 class="subtitle">Display: none</h2>
+            <div class="vis03">
+                <img src="imgs/mario.png" alt="mario">
+                <img src="imgs/mario.png" alt="mario">
+            </div>
+            <h2 class="subtitle">Display: flex</h2>
+            <div class="vis04">
+                <img src="imgs/mario.png" alt="mario">
+                <img src="imgs/mario.png" alt="mario">
+                <img src="imgs/mario.png" alt="mario">
+            </div>
+            <h2 class="subtitle">Display: grid</h2>
+            <div class="vis05">
+                <img src="imgs/mario.png" alt="mario">
+                <img src="imgs/mario.png" alt="mario">
+                <img src="imgs/mario.png" alt="mario">
+            </div>
+            <h2 class="subtitle">Visibility: visible</h2>
+            <div class="vis06">
+                <img src="imgs/mario.png" alt="mario">
+                <img src="imgs/mario.png" alt="mario">
+            </div>
+            <h2 class="subtitle">Visibility: hidden</h2>
+            <div class="vis07">
+                <img src="imgs/mario.png" alt="mario">
+                <img src="imgs/mario.png" alt="mario">
+            </div>
+            <h2 class="subtitle">Overflow: visible</h2>
+            <div class="vis08">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <h2 class="subtitle">Overflow: hidden</h2>
+            <div class="vis09">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <h2 class="subtitle">Overflow: scroll</h2>
+            <div class="vis10">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <h2 class="subtitle">Overflow: auto</h2>
+            <div class="vis11">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <h2 class="subtitle">Z-Index</h2>
+            <div class="vis12">
+                <img src="imgs/mario.png" alt="mario">
+                <img src="imgs/mario.png" alt="mario">
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18-typography</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <style>
+        section {
+            div {
+                border: 2px solid #fff;
+                margin: 1rem auto;
+                padding: 1rem;
+                width: 360px;
+
+                &.typo01 p {
+                    color: #ab7dd5;
+                }
+                &.typo02 p {
+                    font-family: Georgia, serif;
+                }
+                &.typo03 p {
+                    font-size: 2rem;
+                }
+                &.typo04 p {
+                    font-weight: 900;
+                }
+            }
+        }
+    </style>
+</head>
+<body class="css">
+    <nav class="back">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#currentColor" viewBox="0 0 256 256"><path d="M112,56V200L40,128Z" opacity="0.2"></path><path d="M216,120H120V56a8,8,0,0,0-13.66-5.66l-72,72a8,8,0,0,0,0,11.32l72,72A8,8,0,0,0,120,200V136h96a8,8,0,0,0,0-16ZM104,180.69,51.31,128,104,75.31Z"></path></svg>
+        </a>
+    </nav>
+    <main>
+        <header class="mainmenu internal">
+            <h1>18-typography</h1>
+            <img src="../src/imgs/logo-css.png" alt="css">
+            <h3>Properties that control the appearance of text on the page.</h3>
+        </header>
+        <section>
+            <h2 class="subtitle">Color</h2>
+            <div class="typo01">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <h2 class="subtitle">Family</h2>
+            <div class="typo02">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <h2 class="subtitle">Size</h2>
+            <div class="typo03">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <h2 class="subtitle">Weight</h2>
+            <div class="typo04">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

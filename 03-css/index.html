@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-CSS</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+        <style>
+        /* =========================
+        CONFIGURACIÓN GENERAL
+        ========================== */
+
+        body.css {
+            min-height: 100vh;
+            margin: 0;
+            background:
+                radial-gradient(circle at top, #241035 0%, #09070d 45%, #030303 100%);
+        }
+
+        /* =========================
+        ENCABEZADO
+        ========================== */
+
+        body.css header.mainmenu {
+            text-align: center;
+            padding: 25px 20px 15px;
+        }
+
+        body.css header.mainmenu h1 {
+            display: none;
+        }
+
+        body.css header.mainmenu img {
+            width: 250px;
+            max-width: 70%;
+            margin: 0 auto 10px;
+            display: block;
+
+            filter:
+                drop-shadow(0 0 8px rgba(126, 43, 170, .45))
+                drop-shadow(0 8px 18px rgba(0, 0, 0, .5));
+
+            transition: transform .3s ease;
+        }
+
+        body.css header.mainmenu img:hover {
+            transform: scale(1.03);
+        }
+
+        body.css header.mainmenu > h3 {
+            max-width: 700px;
+            margin: 0 auto 35px;
+
+            color: #fff;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 1.6;
+
+            border: none;
+            opacity: .9;
+        }
+
+        /* =========================
+        CONTENEDOR DE LAS COLUMNAS
+        ========================== */
+
+        body.css div.menus {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            gap: 45px;
+
+            width: 90%;
+            max-width: 1150px;
+
+            margin: 0 auto;
+            padding-bottom: 50px;
+        }
+
+        /* =========================
+        CADA COLUMNA
+        ========================== */
+
+        body.css menu.submenu-css {
+            width: 100%;
+            max-width: 520px;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Títulos Reference */
+
+        body.css menu.submenu-css > h3 {
+            color: #d7d0dc;
+
+            text-align: center;
+
+            font-size: 18px;
+            font-weight: 600;
+
+            margin: 0 auto 28px;
+            padding-bottom: 9px;
+
+            width: max-content;
+            min-width: 130px;
+
+            border-bottom: 2px solid #aaa;
+        }
+
+        /* =========================
+        BOTONES
+        ========================== */
+
+        body.css menu.submenu-css > a {
+            display: flex;
+            align-items: center;
+
+            width: 100%;
+            min-height: 68px;
+
+            margin-bottom: 16px;
+            padding: 0;
+
+            box-sizing: border-box;
+
+            background: #a373be;
+            color: #111;
+
+            border-radius: 40px;
+
+            text-decoration: none;
+
+            box-shadow:
+                0 5px 12px rgba(212, 7, 7, 0.35);
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease,
+                background .25s ease;
+        }
+
+        /* =========================
+        NÚMERO
+        ========================== */
+
+        body.css menu.submenu-css > a > span {
+            flex-shrink: 0;
+
+            width: 48px;
+            height: 48px;
+
+            margin-left: 10px;
+            margin-right: 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #5a0875;
+            color: white;
+
+            font-size: 17px;
+            font-weight: 400;
+
+            box-shadow:
+                inset 0 0 0 1px rgba(255,255,255,.08),
+                0 3px 8px rgba(0,0,0,.25);
+        }
+
+        /* =========================
+        TEXTO
+        ========================== */
+
+        body.css menu.submenu-css > a aside {
+            margin: 0;
+            padding: 0;
+        }
+
+        body.css menu.submenu-css > a h4 {
+            margin: 0;
+
+            color: #17131a;
+
+            font-size: 19px;
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        /* =========================
+        EFECTO AL PASAR EL MOUSE
+        ========================== */
+
+        body.css menu.submenu-css > a:hover {
+            transform: translateY(-3px);
+
+            background: #ffffff;
+
+            box-shadow:
+                0 8px 22px rgba(86, 0, 120, .45);
+        }
+
+        body.css menu.submenu-css > a:hover > span {
+            background: #700c91;
+        }
+
+        /* =========================
+        RESPONSIVE
+        ========================== */
+
+        @media screen and (max-width: 850px) {
+
+            body.css div.menus {
+                gap: 25px;
+                width: 94%;
+            }
+
+            body.css menu.submenu-css > a h4 {
+                font-size: 17px;
+            }
+        }
+
+        @media screen and (max-width: 580px) {
+
+            body.css header.mainmenu {
+                padding-top: 15px;
+            }
+
+            body.css header.mainmenu img {
+                width: 210px;
+            }
+
+            body.css header.mainmenu > h3 {
+                font-size: 12px;
+                margin-bottom: 25px;
+            }
+
+            body.css div.menus {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            body.css menu.submenu-css {
+                width: 92%;
+            }
+
+            body.css menu.submenu-css > h3 {
+                margin-bottom: 20px;
+            }
+
+            body.css menu.submenu-css > a {
+                min-height: 62px;
+            }
+
+            body.css menu.submenu-css > a > span {
+                width: 44px;
+                height: 44px;
+                margin-left: 9px;
+                margin-right: 12px;
+            }
+
+            body.css menu.submenu-css > a h4 {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head> 
+<body class="css">
+    <nav class ="back">
+        <a href="../index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256"><path d="M240,208H224V136l2.34,2.34A8,8,0,0,0,237.66,127L139.31,28.68a16,16,0,0,0-22.62,0L18.34,127a8,8,0,0,0,11.32,11.31L32,136v72H16a8,8,0,0,0,0,16H240a8,8,0,0,0,0-16ZM48,120l80-80,80,80v88H160V152a8,8,0,0,0-8-8H104a8,8,0,0,0-8,8v56H48Zm96,88H112V160h32Z"></path></svg>
+
+        </a>
+    </nav>
+    <main> 
+        <header class="mainmenu">
+            <h1>03-CSS</h1>
+            <img src="../src/imgs/logo-css.png" alt="css">
+            
+            <h3> Styling language that enhances the appearance of web pages. </h3>
+        </header>
+        <div class="menus">
+            <menu class="mainmenu submenu-css">
+                <h3>Reference 2.1</h3>
+                <a href="01-document-style.html">
+                    <span>01</span>
+                    <aside>
+                        <h4>Document Style</h4>
+                    </aside>
+                </a>
+                <a href="02-css-file.html">
+                    <span>02</span>
+                    <aside>
+                        <h4>CSS File</h4>
+                    </aside>
+                </a>
+                <a href="03-attr-style.html">
+                    <span>03</span>
+                    <aside>
+                        <h4>Attribute Style</h4>
+                    </aside>
+                </a>
+                <a href="04-basic-selectors.html">
+                    <span>04</span>
+                    <aside>
+                        <h4>Basic Selectors</h4>
+                    </aside>
+                </a>
+                <a href="05-advanced-selectors.html">
+                    <span>05</span>
+                    <aside>
+                        <h4>Advanced Selectors</h4>
+                    </aside>
+                </a>
+                <a href="06-specificity.html">
+                    <span>06</span>
+                    <aside>
+                        <h4>Specificity</h4>
+                    </aside>
+                </a>
+                <a href="07-inheritance.html">
+                    <span>07</span>
+                    <aside>
+                        <h4>Inheritance</h4>
+                    </aside>
+                </a>
+                <a href="08-relative-units.html">
+                    <span>08</span>
+                    <aside>
+                        <h4>Relative Units</h4>
+                    </aside>
+                </a>
+                <a href="09-absolute-units.html">
+                    <span>09</span>
+                    <aside>
+                        <h4>Absolute Units</h4>
+                    </aside>
+                </a>
+                <a href="10-percentage-units.html">
+                    <span>10</span>
+                    <aside>
+                        <h4>Percentage Units</h4>
+                    </aside>
+                </a>
+                <a href="11-colors.html">
+                    <span>11</span>
+                    <aside>
+                        <h4>Colors</h4>
+                    </aside>
+                </a>
+                <a href="12-colors-alpha.html">
+                    <span>12</span>
+                    <aside>
+                        <h4>Colors Alpha</h4>
+                    </aside>
+                </a>
+                <a href="13-box-model.html">
+                    <span>13</span>
+                    <aside>
+                        <h4>Box Model</h4>
+                    </aside>
+                </a>
+                <a href="14-background.html">
+                    <span>14</span>
+                    <aside>
+                        <h4>Background</h4>
+                    </aside>
+                </a>
+                <a href="15-position.html">
+                    <span>15</span>
+                    <aside>
+                        <h4>Position</h4>
+                    </aside>
+                </a>
+                <a href="16-float.html">
+                    <span>16</span>
+                    <aside>
+                        <h4>Float</h4>
+                    </aside>
+                </a>
+                <a href="17-visualization.html">
+                    <span>17</span>
+                    <aside>
+                        <h4>Visualization</h4>
+                    </aside>
+                </a>
+                <a href="18-typography.html">
+                    <span>18</span>
+                    <aside>
+                        <h4>Typography</h4>
+                    </aside>
+                </a>
+                <a href="19-text.html">
+                    <span>19</span>
+                    <aside>
+                        <h4>Text</h4>
+                    </aside>
+                </a>
+                <a href="20-pseudoclasses.html">
+                    <span>20</span>
+                    <aside>
+                        <h4>Pseudoclasses</h4>
+                    </aside>
+                </a>
+                <a href="21-lists.html">
+                    <span>21</span>
+                    <aside>
+                        <h4>List</h4>
+                    </aside>
+                </a>
+                <a href="22-cursors.html">
+                    <span>22</span>
+                    <aside>
+                        <h4>Cursors</h4>
+                    </aside>
+                </a>
+                <a href="23-sprite.html">
+                    <span>23</span>
+                    <aside>
+                        <h4>Sprites</h4>
+                    </aside>
+                </a>
+                <a href="24-challenge-layout.html" target="_blank">
+                    <span>24</span>
+                    <aside>
+                        <h4>Challenge Layout</h4>
+                    </aside>
+                </a>
+            </menu>
+            <menu class="mainmenu submenu-css">
+                <h3>Reference 3.0</h3>
+                <a href="25-new-selectors.html">
+                    <span>25</span>
+                    <aside>
+                        <h4>New Selectors</h4>
+                    </aside>
+                </a>
+                <a href="26-border-radius.html">
+                    <span>26</span>
+                    <aside>
+                        <h4>Border Radius</h4>
+                    </aside>
+                </a>
+                <a href="27-box-shadow.html">
+                    <span>27</span>
+                    <aside>
+                        <h4>Box Shadow</h4>
+                    </aside>
+                </a>
+                <a href="28-challenge-shadow.html">
+                    <span>28</span>
+                    <aside>
+                        <h4>Challenge Shadow</h4>
+                    </aside>
+                </a>
+                <a href="29-new-backgrounds.html">
+                    <span>29</span>
+                    <aside>
+                        <h4>New Backgrounds</h4>
+                    </aside>
+                </a>
+                <a href="30-text-shadow.html">
+                    <span>30</span>
+                    <aside>
+                        <h4>Text Shadow</h4>
+                    </aside>
+                </a>
+                <a href="31-filters.html">
+                    <span>31</span>
+                    <aside>
+                        <h4>Filters</h4>
+                    </aside>
+                </a>
+                <a href="32-clip-path.html">
+                    <span>32</span>
+                    <aside>
+                        <h4>Clip Path</h4>
+                    </aside>
+                </a>
+                <a href="33-web-fonts.html">
+                    <span>33</span>
+                    <aside>
+                        <h4>Web Fonts</h4>
+                    </aside>
+                </a>
+                <a href="34-variables.html">
+                    <span>34</span>
+                    <aside>
+                        <h4>Variables</h4>
+                    </aside>
+                </a>
+                <a href="35-transformations.html">
+                    <span>35</span>
+                    <aside>
+                        <h4>Transformations</h4>
+                    </aside>
+                </a>
+                <a href="36-transitions.html">
+                    <span>36</span>
+                    <aside>
+                        <h4>Transitions</h4>
+                    </aside>
+                </a>
+                <a href="37-animations.html">
+                    <span>37</span>
+                    <aside>
+                        <h4>Animations</h4>
+                    </aside>
+                </a>
+                <a href="38-media-queries.html" target="_blank">
+                    <span>38</span>
+                    <aside>
+                        <h4>Media Queries</h4>
+                    </aside>
+                </a>
+                <a href="39-challenge-responsive.html" target="_blank">
+                    <span>39</span>
+                    <aside>
+                        <h4>Challenge Responsive</h4>
+                    </aside>
+                </a>
+                <a href="40-steps.html">
+                    <span>40</span>
+                    <aside>
+                        <h4>Steps</h4>
+                    </aside>
+                </a>
+                <a href="41-functions.html">
+                    <span>41</span>
+                    <aside>
+                        <h4>Functions</h4>
+                    </aside>
+                </a>
+                <a href="42-parallax.html">
+                    <span>42</span>
+                    <aside>
+                        <h4>Parallax</h4>
+                    </aside>
+                </a>
+                <a href="43-flexbox.html">
+                    <span>43</span>
+                    <aside>
+                        <h4>Flex Box</h4>
+                    </aside>
+                </a>
+                <a href="44-grid.html">
+                    <span>44</span>
+                    <aside>
+                        <h4>Grid</h4>
+                    </aside>
+                </a>
+                <a href="45-challenge-grid.html">
+                    <span>45</span>
+                    <aside>
+                        <h4>Challenge Grid</h4>
+                    </aside>
+                </a>
+            </menu>
+        </div>
+    </main>
+
+    
+</body>
+</html>

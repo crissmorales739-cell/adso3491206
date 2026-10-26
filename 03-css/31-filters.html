@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31-Filters</title>
+    <link rel="stylesheet" href="../src/css/styles.css">
+    <style>
+        section {
+            img.filter {
+                display: block;
+                width: 160px;
+                margin: 1rem auto;
+                transition: all 0.4s ease-in;
+                
+                &.filter1 {
+                    filter: grayscale(1);
+                }
+                &.filter2 {
+                    filter: blur(6px);
+                }
+                &.filter3 {
+                    filter: sepia(1);
+                }
+                &.filter4 {
+                    filter: brightness(.2);
+                }
+                &.filter5 {
+                    filter: invert(1);
+                }
+                &.filter6 {
+                    filter: drop-shadow(2px 2px 12px aqua);
+                }
+                &.filter7 {
+                    filter: hue-rotate(120deg);
+                }
+
+                &:hover {
+                    filter: none;
+                }
+            }
+        }
+    </style>
+</head>
+<body class="css">
+    <nav class="back">
+        <a href="index.html">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg>
+        </a>
+    </nav>
+    <main>
+        <header class="mainmenu internal">
+            <h1>31-Filters</h1>
+            <img src="../src/imgs/logo-css.png" alt="Css">
+            <h3>Defines visual effects (like blur and saturation).</h3>
+        </header>
+        <section>
+            <h2 class="subtitle">GrayScale</h2>
+            <img class="filter filter1" src="imgs/inosuke.png" alt="Inosuke">
+            <h2 class="subtitle">Blur</h2>
+            <img class="filter filter2" src="imgs/inosuke.png" alt="Inosuke">
+            <h2 class="subtitle">Sepia</h2>
+            <img class="filter filter3" src="imgs/inosuke.png" alt="Inosuke">
+            <h2 class="subtitle">Brightness</h2>
+            <img class="filter filter4" src="imgs/inosuke.png" alt="Inosuke">
+            <h2 class="subtitle">Invert</h2>
+            <img class="filter filter5" src="imgs/inosuke.png" alt="Inosuke">
+            <h2 class="subtitle">Drop Shadow</h2>
+            <img class="filter filter6" src="imgs/inosuke.png" alt="Inosuke">
+            <h2 class="subtitle">HUE Rotate</h2>
+            <img class="filter filter7" src="imgs/inosuke.png" alt="Inosuke">
+        </section>
+    </main>
+</body>
+</html>
